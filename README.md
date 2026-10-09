@@ -1,15 +1,9 @@
-# Hull & Yorkshire Coast Travel Journal
+# Hull 3日2夜
 
-Our 16–18 October 2026 itinerary, presented as a vintage illustrated travel journal in English and Hong Kong Traditional Chinese.
+Mobile itinerary for 16–18 October 2026, with English place names and Hong Kong Traditional Chinese labels.
 
-Live page: https://nottsaifuture.github.io/hulltripoct2026/
+https://nottsaifuture.github.io/hulltripoct2026/
 
-- Original illustrated itinerary poster with an enlarged view and PNG download.
-- Day selectors and map legend links for all nine planned stops.
-- Parking addresses and Google Maps links.
-- Departure countdown, personal mood picker and visited-stop passport.
-- Comment drafts with share/copy controls for the group chat.
+Select a date to see the daily area summary, activity timeline and map links. The only supplied time is departure at 12:30 on 16 October. Other times and transport arrangements remain to be confirmed. Optional suggestions are listed separately.
 
-Mood choices, stop ticks and drafts are saved on the visitor’s device, not shared publicly. The artwork is an illustrated route schematic, not a navigation map. Use the individual Google Maps links for navigation.
-
-Artwork created with the built-in image-generation tool using the prompt in `assets/poster-prompt.txt`. North is at the top; the illustrated travel sequence is Burton Constable → Hornsea → Scarborough → Hull.
+This schedule replaces the previous travel-journal homepage.
