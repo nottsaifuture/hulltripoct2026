@@ -1,0 +1,15 @@
+Use case: infographic-diagram. Create ONE beautiful high-resolution portrait 3:4 travel souvenir poster, 2400x3200 if supported. Vintage Scandinavian hand-illustrated travel journal / retro tourism atlas, not a website screenshot. Restrained warm parchment cream, terracotta, dusty blue sea, deep navy ink, sage forest, muted gold; delicate paper grain, imperfect fine ink, flat organic folk-art. Elegant generous margins. Title at top "赫爾・約克郡海岸三日遊" then smaller "Hull & Yorkshire Coast · 3-Day Travel Journal". Subtitle "每日旅行路線圖 | Illustrated Travel Itinerary". Dates "16–18 October 2026".
+Main focus a north-oriented geographically recognisable east Yorkshire coastline, North Sea on RIGHT, mainland LEFT, Humber estuary along bottom. Scarborough near TOP coastal and farther WEST than Hornsea. Hornsea near LOWER RIGHT coast. Hull at BOTTOM LEFT on north bank of Humber estuary, inland well west of the coast. Burton Constable Holiday Park & Arboretum between Hull and Hornsea, northeast of Hull and southwest of Hornsea, INLAND. Coast curves eastward from Scarborough towards Flamborough then runs south to Hornsea and Spurn; do not place Hull on North Sea coast. Small N compass. Only named itinerary destinations, no additional destination stops.
+Connect itinerary in chronological order black dashed routes and small road-trip car icons: Friday Burton Constable -> Hornsea; Saturday Hornsea -> Scarborough; Sunday Scarborough -> Hull. Show each destination ONCE. Marker "1" at Burton Constable and marker "1" at Hornsea are both Day 1; marker "2" Scarborough; marker "3" Hull. Make small arrowheads show travel direction, southbound return inland separated from outbound. These are schematic route connections not a road navigation map.
+Location-specific miniatures: park lake and trees by Burton Constable (NOT a palace visit), Hornsea seafront by Hornsea, Scarborough Harbour boats with South Bay curved sandy beach and small heritage centre near Scarborough, Hull Maritime Museum domed Victorian building by Hull. No invented food stops, no flights, no random castles.
+Bilingual destination labels verbatim "伯頓康斯特布爾" / "Burton Constable"; "霍恩西" / "Hornsea"; "士嘉堡" / "Scarborough"; "赫爾" / "Hull". Label "北海 / North Sea", "亨伯河口 / Humber Estuary".
+A neat bottom itinerary key with these exact 3 English lines, readable at poster scale:
+"16 OCT · Burton Constable Holiday Park & Arboretum · Hornsea: Sands Lane parking · Tesco Superstore"
+"17 OCT · Scarborough: St. Mary's parking · Maritime Heritage Centre · Harbour · South Bay Beach"
+"18 OCT · Hull: Osborne Street parking · Maritime Museum"
+Small footer "Friday departure 12:30 pm · Illustrated route, not to scale". All 9 stops must appear once in this key with no omissions. Accurate English spelling and legible Hong Kong Traditional Chinese. Avoid neon, gradients, glossy effects, overlapped labels, duplicates, watermarks, UI chrome.
+
+
+Review corrections applied with the built-in image tool:
+- Connect Hornsea to Scarborough, followed by a separate southbound line from Scarborough to Hull.
+- Place Hornsea northeast of Burton Constable, and keep the return arrows pointing south.
