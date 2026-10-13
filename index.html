@@ -22,12 +22,12 @@
 </defs></svg>
 
 <main class="sheet" id="sheet">
-<header class="trip-header"><div class="heading-top"><span>OUR OCTOBER TRIP</span><svg aria-hidden="true"><use href="#anchor"/></svg></div><div class="trip-name"><span class="hull-word">Hull</span> <span class="night-pill">3日2夜</span></div><p class="trip-dates">16–18 <span>OCTOBER 2026</span></p><div class="header-places"><span>Burton Constable</span><i aria-hidden="true">·</i><span>Hornsea</span><br><span>Scarborough</span><i aria-hidden="true">·</i><span>Hull</span></div></header>
+<header class="trip-header"><div class="heading-top"><span>OUR OCTOBER TRIP</span><svg aria-hidden="true"><use href="#anchor"/></svg></div><div class="trip-name"><span class="hull-word">Hull</span> <span class="night-pill">3日2夜</span></div><p class="trip-dates">16–18 <span>OCTOBER 2026</span></p><div class="header-places"><span>Burton Constable</span><i aria-hidden="true">·</i><span>Hornsea</span><br><span>Hull</span><i aria-hidden="true">·</i><span>Scarborough</span></div></header>
 <nav class="primary-nav" aria-label="行程分類"><svg class="brand-icon" aria-hidden="true"><use href="#suitcase"/></svg><div class="nav-items"><button type="button" data-panel="itinerary" class="active" aria-pressed="true">行程</button><button type="button" data-panel="prepare" aria-pressed="false">準備</button></div></nav>
 <section id="itinerary-panel"><nav class="date-nav" aria-label="選擇日期"></nav><section class="day-title" aria-labelledby="daily-title"><div class="theme-icon"><svg aria-hidden="true" id="theme"><use href="#departure"/></svg></div><div><p id="day-number">Day 1</p><h1 id="daily-title">Burton Constable &amp; Hornsea</h1><p id="day-summary" class="day-summary"></p></div></section><div class="timeline" id="timeline"></div><aside class="optional"><strong>可選安排 · 尚未加入行程</strong><p id="optional-note"></p></aside><footer class="day-footer"><p>「待確認」代表尚未提供時間，並非預約或已確認安排。</p><p>各站按你提供的次序排列；交通方式及入住／退房時間，收到資料後再加入。</p></footer></section>
 
 <section class="panel" id="prepare-panel" hidden><h1>出發前準備</h1><ul><li>確認集合地點及 10/16 下午 12:30 出發安排。</li><li>補上住宿名稱、入住及退房時間。</li><li>確認各段交通方式及預計出發時間。</li><li>與朋友商量用餐時間，再加入行程。</li><li>出發前查看天氣、景點開放安排及停車場告示。</li></ul><p class="quiet">以上是準備建議，不代表已確認的活動或預訂。</p><button class="return" type="button">返回行程</button></section>
-</main><div class="local-footer">10/16 12:30 出發 · 其他時間待確認。<button type="button" id="print">列印當日</button></div>
+</main><div class="local-footer">10/16 12:30 出發 · 10/18 10:00 離開 Burton Constable · 其他時間待確認。<button type="button" id="print">列印當日</button></div>
 <script>
 const days=[
 {date:'10/16',weekday:'週五',title:'Burton Constable & Hornsea',summary:'樹木園綠景、Hornsea 海邊散步，再到 Tesco 補給。',icon:'departure',optional:'可按到達時間安排用餐或休息；地點及時間由大家決定。',events:[
@@ -38,20 +38,26 @@ const days=[
 {title:'Hornsea',en:'Hornsea',category:'景點',note:'第二站。到達及離開時間待確認。',query:'Hornsea'},
 {transport:true,title:'前往 Tesco',note:'Hornsea → Southgate；交通方式及車程待確認。'},
 {title:'Tesco Superstore',en:'Tesco Superstore',category:'購物',address:'Tesco Stores Ltd, Southgate, Hornsea HU18 1RE'}]},
-{date:'10/17',weekday:'週六',title:'Scarborough',summary:'海事文化、港口船隻與 South Bay Beach 海景。',icon:'anchor',optional:'可在海港或海灘行程之間留一段用餐時間；餐廳及時間待商量。',events:[
-{transport:true,title:'前往 Scarborough',note:'出發地點、交通方式及車程待確認。'},
+{date:'10/17',weekday:'週六',title:'Hull',summary:'市區散步：海事博物館、Trinity Market，以及 Hull Fair。',icon:'museum',optional:'可在景點之間安排用餐；餐廳及時間待商量。Hull Fair 的開放日期及時間請出發前查看。',events:[
+{transport:true,title:'前往 Hull',note:'出發地點、交通方式及車程待確認。'},
+{title:'Osborne Street multi-storey car park',en:'Osborne Street multi-storey car park（首選停車場）',category:'停車',address:'Osborne Street, Hull HU1 2NL'},
+{title:'Princes Quay Car Parking',en:'Princes Quay Car Parking（後備停車場）',category:'停車',address:'30G Princes Dock St, Hull HU1 2PQ, United Kingdom'},
+{transport:true,title:'前往 Hull Maritime Museum',note:'由停車場步行前往 Queen Victoria Square；所需時間待確認。'},
+{title:'Hull Maritime Museum',en:'Hull Maritime Museum',category:'景點',address:'Queen Victoria Square, Queen Victoria Sq, Hull HU1 3DX'},
+{transport:true,title:'前往 Trinity Market',note:'Queen Victoria Square → Lowgate；交通方式及所需時間待確認。'},
+{title:'Trinity Market',en:'Trinity Market',category:'景點',address:'Lowgate, Hull HU1 2JH, UK'},
+{transport:true,title:'前往 Hull Fair',note:'Hull Fair 停車場在 MKM Stadium；交通方式及所需時間待確認。'},
+{title:'Hull Fair Parking · MKM Stadium',en:'Hull Fair Parking · MKM Stadium',category:'停車',address:'Walton St, Hull HU3 6HU, United Kingdom'}]},
+{date:'10/18',weekday:'週日',title:'Scarborough',summary:'海事文化、港口船隻與 South Bay Beach 海景，然後回家。',icon:'anchor',optional:'可在海港或海灘行程之間留一段用餐時間；餐廳及時間待商量。回程時間待確認。',events:[
+{time:'10:00',title:'離開 Burton Constable',note:'Burton Constable Holiday Park & Arboretum 出發，前往 Scarborough。'},
 {title:'St. Mary’s Pay and Display Carpark',en:'St. Mary’s Pay and Display Carpark',category:'停車',address:'Paradise Mews, Paradise, Scarborough YO11 1RY'},
 {transport:true,title:'前往 Scarborough Maritime Heritage Centre',note:'由停車場前往 Eastborough；交通方式及所需時間待確認。'},
 {title:'Scarborough Maritime Heritage Centre',en:'Scarborough Maritime Heritage Centre',category:'景點',address:'45 Eastborough, Scarborough YO11 1NH'},
 {transport:true,title:'前往 Scarborough港',note:'Eastborough → West Pier；交通方式及所需時間待確認。'},
 {title:'Scarborough Harbour',en:'Scarborough Harbour',category:'景點',address:'18 W Pier, Scarborough YO11 1PD'},
 {transport:true,title:'前往 South Bay Beach',note:'由海港前往 South Bay；交通方式及所需時間待確認。'},
-{title:'South Bay Beach',en:'South Bay Beach',category:'景點',address:'South Bay Beach, Scarborough'}]},
-{date:'10/18',weekday:'週日',title:'Hull',summary:'市區散步，欣賞 Hull Maritime Museum 的海事歷史展品。',icon:'museum',optional:'可在博物館行程前後安排用餐。回程目的地及時間尚未提供，暫不加入時間軸。',events:[
-{transport:true,title:'前往 Hull',note:'出發地點、交通方式及車程待確認。'},
-{title:'Osborne Street multi-storey car park',en:'Osborne Street multi-storey car park',category:'停車',address:'Osborne Street, Hull HU1 2NL'},
-{transport:true,title:'前往 Hull Maritime Museum',note:'Osborne Street → Queen Victoria Square；交通方式及所需時間待確認。'},
-{title:'Hull Maritime Museum',en:'Hull Maritime Museum',category:'景點',address:'Queen Victoria Square, Hull HU1 3DX'}]}
+{title:'South Bay Beach',en:'South Bay Beach',category:'景點',address:'South Bay Beach, Scarborough'},
+{transport:true,title:'回家',note:'旅程完結，回程時間及路線待確認。'}]}
 ];
 let selected=0;const nav=document.querySelector('.date-nav'),timeline=document.getElementById('timeline');
 const icons={景點:'📍',停車:'🅿',購物:'🛍'};
