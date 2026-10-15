@@ -12,6 +12,48 @@
 .day-title{align-items:center}.day-title h1{font-size:22px;overflow-wrap:anywhere}.day-title .day-summary{font-size:14px;line-height:1.65;color:#665a67;margin:8px 0 0}.day-title>div:last-child{min-width:0}.trip-header{font-size:20px}.trip-header small{font-size:12px;padding:0 10px}.event-card h2{overflow-wrap:anywhere}@media(max-width:380px){.day-title h1{font-size:19px}.day-title .day-summary{font-size:13px}}
 .trip-header{text-align:left;background:var(--ivory);padding:24px 27px 25px;border-bottom:var(--line);position:relative}.heading-top{display:flex;align-items:center;justify-content:space-between;gap:15px}.heading-top>span{font-size:12px;font-weight:700;letter-spacing:.16em;color:#776466}.heading-top svg{width:37px;height:35px}.trip-name{display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin:9px 0 12px;line-height:1.1}.hull-word{font-family:ui-rounded,"Arial Rounded MT Bold","Trebuchet MS",sans-serif;font-size:66px;font-weight:900;letter-spacing:-.055em}.night-pill{display:inline-block;border:var(--line);border-radius:35px;background:var(--pink);padding:10px 16px;font-size:20px;font-weight:700;transform:rotate(-4deg);box-shadow:3px 3px 0 #393533}.trip-dates{font-size:22px;margin:0;letter-spacing:.02em;font-weight:650}.trip-dates span{font-size:13px;letter-spacing:.08em;margin-left:5px}.header-places{font-size:14px;line-height:1.9;color:#756c69;margin-top:13px;border-top:1px dashed #cdbdb6;padding-top:11px;font-weight:500}.header-places i{font-style:normal;margin:0 9px;color:#a06c66}@media(max-width:380px){.trip-header{padding:22px}.hull-word{font-size:59px}.trip-name{gap:17px}.night-pill{font-size:18px}.heading-top>span{font-size:11px}.header-places{font-size:13px}}
 .day-map{margin:18px 0}.day-map img{display:block;width:100%;height:auto;border:3px solid #393533;border-radius:14px;background:#fff}.day-map figcaption{font-size:13px;margin-top:8px;color:#393533}
+
+/* fairground sign header: bulbs chase round the edge, letters light up in turn */
+.trip-header{background:#2d2640;color:#faf9ef;overflow:hidden;border-bottom:var(--line)}
+.trip-header:before,.trip-header:after{content:"";position:absolute;left:0;right:0;height:10px;background:radial-gradient(circle,#ffe58a 0 3px,transparent 4px) 0 50%/22px 10px repeat-x;animation:bulbs 1.2s steps(1) infinite}
+.trip-header:before{top:6px}.trip-header:after{bottom:6px;animation-delay:.6s}
+.heading-top>span{color:#f2b9b1}.heading-top svg{width:46px;height:46px;padding:7px;border-radius:50%;background:#faf9ef;box-shadow:0 0 12px #f2d078aa}
+.trip-name{margin-top:14px}
+.hull-word{display:inline-flex;font-size:76px;letter-spacing:-.02em}
+.hull-word b{font-weight:900;color:#5a4d78;animation:letterlit 2.4s ease-in-out infinite;animation-delay:calc(var(--n)*.3s)}
+.hull-word b:nth-child(1){--n:0}.hull-word b:nth-child(2){--n:1}.hull-word b:nth-child(3){--n:2}.hull-word b:nth-child(4){--n:3}
+.night-pill{color:var(--ink);animation:pillpop 2.4s ease-in-out infinite}
+.trip-dates{color:#faf9ef}.trip-dates span{color:#f2d078}
+.header-places{color:#d9d0ea;border-top-color:#6a5c8a}.header-places i{color:#f2d078}
+@keyframes bulbs{0%{opacity:1}50%{opacity:.25}}
+@keyframes letterlit{0%,100%{color:#5a4d78;text-shadow:none}35%,55%{color:#fff6c9;text-shadow:0 0 6px #ffe58a,0 0 18px #f2d078,0 0 34px #eea096}}
+@keyframes pillpop{0%,100%{transform:rotate(-4deg) scale(1)}50%{transform:rotate(-4deg) scale(1.07)}}
+/* richer cards */
+body{background:radial-gradient(circle at 20% 0,#f3e6f2,transparent 40%),radial-gradient(circle at 90% 30%,#d7ecf3,transparent 40%),#e7e4dd}
+.event{animation:rise .55s cubic-bezier(.2,.8,.3,1) both;animation-delay:calc(var(--i,0)*70ms)}
+.event-card{transition:transform .2s,box-shadow .2s}.event-card:hover{transform:translate(-2px,-2px);box-shadow:4px 4px 0 var(--ink)}
+.day-title{background:linear-gradient(120deg,var(--lavender),#f7e3df,var(--lavender));background-size:200% 100%;animation:sheen 9s ease-in-out infinite}
+.date-choice[aria-pressed="true"] .date-icon svg{animation:bob 1.6s ease-in-out infinite}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}}
+@keyframes sheen{50%{background-position:100% 0}}
+@keyframes bob{50%{transform:translateY(-4px) rotate(-5deg)}}
+/* packing list */
+.pack-intro{font-size:14px;color:#6d6560}
+.pack-progress{display:flex;align-items:center;gap:12px;margin:14px 0 4px}
+.pack-progress progress{flex:1;height:14px;accent-color:#d77f72}
+.pack-group{margin:20px 0 0;border:2px solid var(--ink);border-radius:20px;background:#fff;overflow:hidden}
+.pack-group h2{margin:0;padding:9px 16px;font-size:16px;background:var(--lavender);border-bottom:2px solid var(--ink)}
+.pack-group:nth-of-type(3n+2) h2{background:var(--blue)}.pack-group:nth-of-type(3n) h2{background:#fbe9ae}
+.pack-group ul{list-style:none;margin:0;padding:6px 0}
+.pack-group li{margin:0}
+.pack-group label{display:flex;gap:12px;align-items:flex-start;padding:9px 16px;cursor:pointer;font-size:15px;line-height:1.5}
+.pack-group label small{display:block;font-size:12px;color:#7a726c}
+.pack-group input{width:22px;height:22px;margin:1px 0 0;flex-shrink:0;accent-color:#d77f72}
+.pack-group input:checked+span{text-decoration:line-through;color:#9a928c}
+.pack-group input:focus-visible{outline:3px solid #9069b2;outline-offset:2px}
+@media(max-width:380px){.hull-word{font-size:64px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}.hull-word b{color:#ffe58a}}
+@media print{.trip-header:before,.trip-header:after{display:none}}
 </style>
 </head>
 <body>
@@ -23,12 +65,12 @@
 </defs></svg>
 
 <main class="sheet" id="sheet">
-<header class="trip-header"><div class="heading-top"><span>OUR OCTOBER TRIP</span><svg aria-hidden="true"><use href="#anchor"/></svg></div><div class="trip-name"><span class="hull-word">Hull</span> <span class="night-pill">3日2夜</span></div><p class="trip-dates">16–18 <span>OCTOBER 2026</span></p><div class="header-places"><span>Burton Constable</span><i aria-hidden="true">·</i><span>Hornsea</span><br><span>Hull</span><i aria-hidden="true">·</i><span>Scarborough</span></div></header>
+<header class="trip-header"><div class="heading-top"><span>OUR OCTOBER TRIP</span><svg aria-hidden="true"><use href="#anchor"/></svg></div><div class="trip-name"><span class="hull-word" role="img" aria-label="Hull"><b aria-hidden="true">H</b><b aria-hidden="true">u</b><b aria-hidden="true">l</b><b aria-hidden="true">l</b></span> <span class="night-pill">3日2夜</span></div><p class="trip-dates">16–18 <span>OCTOBER 2026</span></p><div class="header-places"><span>Burton Constable</span><i aria-hidden="true">·</i><span>Hornsea</span><br><span>Hull</span><i aria-hidden="true">·</i><span>Scarborough</span></div></header>
 <nav class="primary-nav" aria-label="行程分類"><svg class="brand-icon" aria-hidden="true"><use href="#suitcase"/></svg><div class="nav-items"><button type="button" data-panel="itinerary" class="active" aria-pressed="true">行程</button><button type="button" data-panel="prepare" aria-pressed="false">準備</button></div></nav>
 <section id="itinerary-panel"><nav class="date-nav" aria-label="選擇日期"></nav><section class="day-title" aria-labelledby="daily-title"><div class="theme-icon"><svg aria-hidden="true" id="theme"><use href="#departure"/></svg></div><div><p id="day-number">Day 1</p><h1 id="daily-title">Burton Constable &amp; Hornsea</h1><p id="day-summary" class="day-summary"></p></div></section><div class="timeline" id="timeline"></div><figure id="day-map" class="day-map" hidden><a id="day-map-link" href="#" target="_blank" rel="noopener"><img alt="" loading="lazy"></a><figcaption></figcaption></figure>
 <aside class="optional"><strong>可選安排 · 尚未加入行程</strong><p id="optional-note"></p></aside><footer class="day-footer"><p>「待確認」代表尚未提供時間，並非預約或已確認安排。</p><p>各站按你提供的次序排列；交通方式及入住／退房時間，收到資料後再加入。</p></footer></section>
 
-<section class="panel" id="prepare-panel" hidden><h1>出發前準備</h1><ul><li>確認集合地點及 10/16 下午 12:30 出發安排。</li><li>補上住宿名稱、入住及退房時間。</li><li>確認各段交通方式及預計出發時間。</li><li>與朋友商量用餐時間，再加入行程。</li><li>出發前查看天氣、景點開放安排及停車場告示。</li></ul><p class="quiet">以上是準備建議，不代表已確認的活動或預訂。</p><button class="return" type="button">返回行程</button></section>
+<section class="panel" id="prepare-panel" hidden><h1>出發前準備 · What to bring</h1><p class="pack-intro">10 月的約克郡海岸偏涼、多風，天氣變化快，建議洋蔥式穿搭。勾選已執拾的物品，記錄會儲存在這部裝置上。出發前請再查看天氣預報。</p><div class="pack-progress"><progress id="pack-bar" max="1" value="0" aria-label="已執拾進度"></progress><span id="pack-text" role="status">0 / 0</span></div><div id="pack-list"></div><p class="quiet">以上是準備建議，可按需要增減。</p><button class="return" type="button">返回行程</button></section>
 </main><div class="local-footer">10/16 12:30 出發 · 10/18 10:00 離開 Burton Constable · 其他時間待確認。<button type="button" id="print">列印當日</button></div>
 <script>
 const days=[
@@ -66,8 +108,18 @@ let selected=0;const nav=document.querySelector('.date-nav'),timeline=document.g
 const icons={景點:'📍',停車:'🅿',購物:'🛍'};
 days.forEach((d,i)=>{const button=document.createElement('button');button.type='button';button.className='date-choice';button.dataset.day=i;button.setAttribute('aria-label',d.date+' '+d.weekday);button.innerHTML='<span class="node" aria-hidden="true"></span><span class="date-icon" aria-hidden="true"><svg><use href="#suitcase"/></svg></span><span class="date-value">'+d.date+'</span><span class="weekday">'+d.weekday+'</span>';button.addEventListener('click',()=>render(i));nav.append(button)});
 function addText(parent,tag,text,cls){const el=document.createElement(tag);el.textContent=text;if(cls)el.className=cls;parent.append(el);return el}
-function render(index){selected=index;const d=days[index];document.querySelectorAll('.date-choice').forEach((b,i)=>b.setAttribute('aria-pressed',String(i===index)));document.getElementById('day-number').textContent='Day '+(index+1);document.getElementById('daily-title').textContent=d.title;document.getElementById('day-summary').textContent=d.summary;document.querySelector('#theme use').setAttribute('href','#'+d.icon);document.getElementById('optional-note').textContent=d.optional;const fig=document.getElementById('day-map');fig.hidden=!d.map;if(d.map){fig.querySelector('img').src=d.map.src;document.getElementById('day-map-link').href=d.map.src;fig.querySelector('img').alt=d.map.alt;fig.querySelector('figcaption').textContent=d.map.caption}timeline.replaceChildren();d.events.forEach(event=>{const row=document.createElement('article');row.className='event'+(event.transport?' transport':'');addText(row,'div',event.time||'待確認','time'+(event.time?' known':''));const marker=addText(row,'span','','marker');marker.setAttribute('aria-hidden','true');if(event.transport){const content=document.createElement('div');content.className='transport-content';addText(content,'span',event.walk?'🚶 步行':'🚗 交通','badge');const desc=addText(content,'div',event.title,'transport-desc');addText(desc,'small',event.note);row.append(content)}else{const card=document.createElement('div');card.className='event-card';if(event.category)addText(card,'span',icons[event.category]+' '+event.category,'category '+(event.category==='停車'?'parking':event.category==='購物'?'shop':''));addText(card,'h2',event.title);if(event.en&&event.en!==event.title)addText(card,'p',event.en);if(event.address)addText(card,'p',event.address);if(event.note)addText(card,'p',event.note);if(event.query||event.address){const link=addText(card,'a','查看地圖');link.href='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(event.query||event.en+' '+event.address);link.target='_blank';link.rel='noopener'}row.append(card)}timeline.append(row)})}
+function render(index){selected=index;const d=days[index];document.querySelectorAll('.date-choice').forEach((b,i)=>b.setAttribute('aria-pressed',String(i===index)));document.getElementById('day-number').textContent='Day '+(index+1);document.getElementById('daily-title').textContent=d.title;document.getElementById('day-summary').textContent=d.summary;document.querySelector('#theme use').setAttribute('href','#'+d.icon);document.getElementById('optional-note').textContent=d.optional;const fig=document.getElementById('day-map');fig.hidden=!d.map;if(d.map){fig.querySelector('img').src=d.map.src;document.getElementById('day-map-link').href=d.map.src;fig.querySelector('img').alt=d.map.alt;fig.querySelector('figcaption').textContent=d.map.caption}timeline.replaceChildren();d.events.forEach((event,ei)=>{const row=document.createElement('article');row.style.setProperty('--i',ei);row.className='event'+(event.transport?' transport':'');addText(row,'div',event.time||'待確認','time'+(event.time?' known':''));const marker=addText(row,'span','','marker');marker.setAttribute('aria-hidden','true');if(event.transport){const content=document.createElement('div');content.className='transport-content';addText(content,'span',event.walk?'🚶 步行':'🚗 交通','badge');const desc=addText(content,'div',event.title,'transport-desc');addText(desc,'small',event.note);row.append(content)}else{const card=document.createElement('div');card.className='event-card';if(event.category)addText(card,'span',icons[event.category]+' '+event.category,'category '+(event.category==='停車'?'parking':event.category==='購物'?'shop':''));addText(card,'h2',event.title);if(event.en&&event.en!==event.title)addText(card,'p',event.en);if(event.address)addText(card,'p',event.address);if(event.note)addText(card,'p',event.note);if(event.query||event.address){const link=addText(card,'a','查看地圖');link.href='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(event.query||event.en+' '+event.address);link.target='_blank';link.rel='noopener'}row.append(card)}timeline.append(row)})}
 function panel(name){document.querySelectorAll('[data-panel]').forEach(b=>{const active=b.dataset.panel===name;b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active))});['itinerary','prepare'].forEach(id=>document.getElementById(id+'-panel').hidden=id!==name)}
 document.querySelectorAll('[data-panel]').forEach(b=>b.addEventListener('click',()=>panel(b.dataset.panel)));document.querySelectorAll('.return').forEach(b=>b.addEventListener('click',()=>panel('itinerary')));document.getElementById('print').addEventListener('click',()=>{panel('itinerary');window.print()});render(0);
+const pack=[
+['證件及付款',[['護照／身分證明文件','按需要攜帶'],['銀行卡及少量英鎊現金','停車場、市集及遊樂博覽會可能需要現金或硬幣'],['手機停車付款用 App 及已登記的車牌資料','出發前先在家設定好'],['車輛文件及車匙','']]],
+['衣物（10 月海邊）',[['防風防水外套','Hornsea 及 Scarborough 海邊風大'],['保暖中層：毛衣或抓毛外套',''],['帽、圍巾、手套','海邊早晚較冷'],['舒適防滑步行鞋','Hull 及 Scarborough 大部分地方步行'],['摺疊雨傘','']]],
+['每日行程用品',[['日用小背包','只帶當日所需物品，步行時較輕鬆'],['水樽及小食','第 1 日可在 Tesco 補給'],['紙巾及濕紙巾',''],['膠袋','裝濕衣服或垃圾'],['Scarborough 泊車分區圖','已放在第 3 日行程，可先截圖儲存'],['停車硬幣、泊車時間提醒','']]],
+['電子用品',[['手機及充電線',''],['行動電源','拍照及看地圖很耗電'],['車用充電器',''],['相機／自拍棒','海港及海灘拍照']]],
+['個人及健康',[['常用藥物及個人護理用品',''],['洗漱用品及毛巾','住宿安排未確認，按需要攜帶'],['防曬及潤唇膏','海邊風大也會曬傷乾裂'],['口罩及簡單急救用品','']]]
+];
+const packKey='hull-pack-checked';let packDone={};try{packDone=JSON.parse(localStorage.getItem(packKey)||'{}')||{}}catch{}
+function packUpdate(){const boxes=[...document.querySelectorAll('#pack-list input')];const n=boxes.filter(b=>b.checked).length;document.getElementById('pack-bar').max=boxes.length||1;document.getElementById('pack-bar').value=n;document.getElementById('pack-text').textContent=n+' / '+boxes.length+(n===boxes.length&&n?' 🎉 全部準備好！':'')}
+(function(){const root=document.getElementById('pack-list');pack.forEach(([title,items],g)=>{const sec=document.createElement('section');sec.className='pack-group';addText(sec,'h2',title);const ul=document.createElement('ul');items.forEach(([name,tip],i)=>{const id='pk'+g+'_'+i,li=document.createElement('li'),label=document.createElement('label'),cb=document.createElement('input');cb.type='checkbox';cb.id=id;cb.checked=!!packDone[id];cb.addEventListener('change',()=>{packDone[id]=cb.checked;try{localStorage.setItem(packKey,JSON.stringify(packDone))}catch{}packUpdate()});const text=document.createElement('span');text.textContent=name;if(tip)addText(text,'small',tip);label.append(cb,text);li.append(label);ul.append(li)});sec.append(ul);root.append(sec)});packUpdate()})();
 </script>
 </body></html>
